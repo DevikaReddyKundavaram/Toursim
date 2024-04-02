@@ -1,0 +1,126 @@
+/* Add your custom styles here */
+
+/* Navbar styles */
+#navbar {
+  background-color: #343a40;
+  padding: 15px 0;
+}
+
+.navbar-nav a {
+  color: #ffffff;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+header h1 {
+  color: #343a40;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #6c757d;
+  font-size: 18px;
+}
+
+/* Places section styles */
+.places {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+.places h2 {
+  text-align: center;
+  color: #343a40;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  color: #343a40;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #6c757d;
+  font-size: 16px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.foot-panel1,
+.foot-panel2,
+.foot-panel3,
+.foot-panel4 {
+  margin-bottom: 20px;
+}
+
+.foot-panel2 ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.foot-panel2 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav a {
+    margin-bottom: 10px;
+  }
+}
+/* Add this CSS to your existing styles.css or create a new file for city_styles.css*/
+
+/* Add this CSS to your existing styles.css or create a new file for city_styles.css */
+.card {
+    min-width: 12rem; /* Set the minimum width for the cards */
+    min-height: 15rem; /* Set the minimum height for the cards */
+    margin: 10px; /* Add margin between cards */
+}
+
+.card .card-body {
+    padding: 10px; /* Add padding to the card body */
+}
+
+.card-img-top {
+    height: 100%; /* Ensure the image takes up the full height of the card */
+    object-fit: cover; /* Maintain image aspect ratio and cover the container */
+}

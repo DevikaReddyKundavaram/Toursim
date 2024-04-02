@@ -1,0 +1,123 @@
+/* location_styles.css */
+
+/* Add your custom styles here */
+body {
+    background-color: #f8f9fa; /* Set a background color */
+    color: #495057; /* Set text color */
+}
+
+#navbar {
+    background-color: #343a40; /* Set navbar background color */
+    color: #ffffff; /* Set navbar text color */
+}
+
+.container {
+    margin-top: 20px; /* Add margin space at the top of the container */
+}
+
+.place-section {
+    margin-bottom: 30px; /* Add margin space between place sections */
+}
+
+.youtube-video {
+    margin-top: 20px; /* Add margin space above the YouTube video section */
+}
+
+/* Add more custom styles as needed */
+/* location_styles.css */
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Set footer background color */
+    color: #ffffff; /* Set footer text color */
+    padding: 20px 0; /* Add padding to the footer */
+}
+
+.foot-panel1,
+.foot-panel2,
+.foot-panel3,
+.foot-panel4 {
+    margin-bottom: 20px; /* Add margin space between footer panels */
+}
+.foot-panel2{
+    display:flex;
+
+}
+/* Add more styles to the footer */
+footer {
+    background-color: #333; /* Change the background color */
+    color: #fff; /* Change the text color */
+    padding: 20px 0; /* Add some padding */
+}
+
+.foot-panel1 {
+    cursor: pointer;
+    text-align: center;
+}
+
+.foot-panel2 {
+    display: flex;
+    justify-content: space-between; /* Space out the two columns */
+}
+
+.foot-panel2 div {
+    flex: 1; /* Equal width for both columns */
+    margin-right: 20px; /* Add some space between the columns */
+}
+
+.foot-panel2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.foot-panel2 p {
+    font-weight: bold;
+}
+
+.foot-panel2 a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px; /* Add space between links */
+}
+
+.foot-panel3 {
+    text-align: center;
+}
+
+.foot-panel4 {
+    text-align: center;
+    margin-top: 20px; /* Add space at the top */
+}
+
+/* Style for Back to Top button */
+.foot-panel1 {
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Style for State and Popular Places lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul p {
+    font-weight: bold;
+    margin-bottom: 10px; /* Add space below the heading */
+}
+
+ul a {
+    color: #ffffff; /* Set link color */
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px; /* Add space between links */
+}
+
+/* Add more custom styles as needed */
+.custom-card-img {
+    height: 200px;
+    width:100px/* Adjust the height as needed */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}

@@ -1,0 +1,308 @@
+
+*{
+  margin:0;
+  padding: ;
+}
+/* .nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.nav-items{
+   justify-content: space-evenly;
+   align-items: center;
+}
+.nav-items a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+.nav-items a:hover:not(.active)
+{
+  background-color:yellow;
+} */
+.nav {
+  display: flex;
+  justify-content: space-between; /* Align items evenly */
+  background-color: #343a40; /* Navbar background color */
+  padding: 30px; /* Add padding around the navbar */
+}
+
+.nav-items {
+  list-style-type: none; /* Remove default list styling */
+}
+
+.nav-items a {
+  color: #ffffff; /* Text color for nav links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 5px 10px; /* Add padding inside nav links */
+}
+
+.nav-items a:hover {
+  color: #f0ad4e; /* Text color on hover */
+}
+
+.input-group {
+  margin-bottom: 0; /* Remove bottom margin from input group */
+}
+
+/* Optional: Style the search button */
+.btn-search {
+  background-color: #f0ad4e; /* Button background color */
+  color: #ffffff; /* Button text color */
+}
+.active{
+  background-color: #04AA6D;
+}
+.custom-margin {
+    margin-bottom: 20px; /* Adjust the value as needed */
+  }
+.custom-negative-margin {
+    margin-top: -70px; /* Adjust the value as needed */
+  }
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+}
+
+.fullscreen-bg__video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* Jumbotron styles */
+.jumbotron {
+  background-image: url('path/to/your/jumbotron-background-image.jpg');
+  background-size: cover;
+  color: #ffffff; /* Text color on Jumbotron */
+}
+
+.text-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Overlay color on Jumbotron */
+}
+
+/* About India section */
+.About-India {
+  padding: 50px 0;
+}
+
+/* Nearby Places section */
+.nearby-places {
+  padding: 50px 0;
+}
+
+.nearby-place {
+  margin-bottom: 30px;
+}
+
+/* Quotes for Travelers section */
+.person {
+  text-align: center;
+}
+
+/* Heritage Preservation section */
+.heritage-preservation {
+  margin-bottom: 30px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #343a40; /* Footer background color */
+  color: #ffffff; /* Footer text color */
+  padding: 20px 0;
+}
+
+.foot-panel1,
+.foot-panel2,
+.foot-panel3,
+.foot-panel4 {
+  text-align: center;
+}
+
+.foot-panel2 ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.foot-panel2 a {
+  text-decoration: none;
+  color: #ffffff; /* Footer link color */
+}
+
+/* Add more styles as needed */
+
+.foot-panel2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.states-list,
+.popular-places-list {
+  flex: 1;
+}
+
+.states-list h5,
+.popular-places-list h5 {
+  margin-bottom: 5px;
+}
+.foot-panel2 {
+  display: flex;
+  flex-direction: column;  /* Change flex direction to column */
+  align-items: flex-start;  /* Align items to the start of the container */
+}
+
+.states-list,
+.popular-places-list {
+  margin-top: 10px;  /* Add margin between the lists */
+}
+
+.states-list h5,
+.popular-places-list h5 {
+  margin-bottom: 5px;
+}
+/* toursim_app/css/styles.css */
+
+/* Add your custom styles here */
+
+/* Navbar styles */
+#navbar {
+  background-color: #343a40; /* Navbar background color */
+}
+h2{
+    margin-bottom:2rem;
+}
+.navbar-nav a {
+  color: #ffffff; /* Navbar link color */
+}
+
+.custom-margin {
+    margin-bottom: 20px; /* Adjust the value as needed */
+  }
+.custom-negative-margin {
+    margin-top: -70px; /* Adjust the value as needed */
+  }
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+}
+
+.fullscreen-bg__video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* Jumbotron styles */
+.jumbotron {
+  background-image: url('path/to/your/jumbotron-background-image.jpg');
+  background-size: cover;
+  color: #ffffff; /* Text color on Jumbotron */
+}
+
+.text-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Overlay color on Jumbotron */
+}
+
+/* About India section */
+.About-India {
+  padding: 50px 0;
+}
+
+/* Nearby Places section */
+.nearby-places {
+  padding: 50px 0;
+}
+
+.nearby-place {
+  margin-bottom: 30px;
+}
+
+/* Quotes for Travelers section */
+.person {
+  text-align: center;
+}
+
+/* Heritage Preservation section */
+.heritage-preservation {
+  margin-bottom: 30px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #343a40; /* Footer background color */
+  color: #ffffff; /* Footer text color */
+  padding: 20px 0;
+}
+
+.foot-panel1,
+.foot-panel2,
+.foot-panel3,
+.foot-panel4 {
+  text-align: center;
+}
+
+.foot-panel2 ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.foot-panel2 a {
+  text-decoration: none;
+  color: #ffffff; /* Footer link color */
+}
+
+/* Add more styles as needed */
+
+.foot-panel2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.states-list,
+.popular-places-list {
+  flex: 1;
+}
+
+.states-list h5,
+.popular-places-list h5 {
+  margin-bottom: 5px;
+}
+.foot-panel2 {
+  display: flex;
+  flex-direction: column;  /* Change flex direction to column */
+  align-items: flex-start;  /* Align items to the start of the container */
+}
+
+.states-list,
+.popular-places-list {
+  margin-top: 10px;  /* Add margin between the lists */
+}
+
+.states-list h5,
+.popular-places-list h5 {
+  margin-bottom: 5px;
+}
+.navbar-image{
+  width: 10px;
+  height: 20px;
+}
+.make
+{
+  color: white !important;
+}

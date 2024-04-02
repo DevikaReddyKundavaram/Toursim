@@ -1,0 +1,59 @@
+/* toursim_app/css/state_style.css */
+
+/* Include common styles from styles.css */
+#navbar {
+  background-color: #343a40; /* Navbar background color */
+}
+
+.navbar-nav a {
+  color: #ffffff; /* Navbar link color */
+}
+
+.About-India {
+  padding: 50px 0;
+}
+
+.nearby-places {
+  padding: 50px 0;
+}
+
+.nearby-place {
+  margin-bottom: 30px;
+}
+
+.person {
+  text-align: center;
+}
+
+.heritage-preservation {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #343a40; /* Footer background color */
+  color: #ffffff; /* Footer text color */
+  padding: 20px 0;
+}
+
+.foot-panel1,
+.foot-panel2,
+.foot-panel3,
+.foot-panel4 {
+  text-align: center;
+}
+
+.foot-panel2 ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.foot-panel2 a {
+  text-decoration: none;
+  color: #ffffff; /* Footer link color */
+}
+
+/* Add state-specific styles below */
+
+/* ... (other state-specific styles) ... */

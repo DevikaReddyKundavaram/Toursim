@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+
+<!--&lt;!&ndash; tourism_template.html &ndash;&gt;-->
+<!--{% load static %}-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Tourism in India</title>-->
+<!--  &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">-->
+<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+
+<!--  &lt;!&ndash; Add these lines in the head section of your HTML file &ndash;&gt;-->
+<!--<link rel="stylesheet" href="{% static 'styles.css' %}">-->
+
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+<!--<script src="{% static 'toursim_app/js/index_script.js' %}" defer></script>-->
+<!--&lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+
+<!--&lt;!&ndash; Add your custom CSS file &ndash;&gt;-->
+<!--<link rel="stylesheet" href="styles.css">-->
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+
+<!--</head>-->
+<!--<body>-->
+
+
+
+<!--{% block content %}-->
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark">-->
+<!--    <a class="navbar-brand" href="#">Navbar</a>-->
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--      <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
+<!--      <div class="navbar-nav">-->
+<!--        <a class="nav-link active" href="#">-->
+<!--          Home-->
+<!--&lt;!&ndash;          <span class="sr-only">(current)</span>&ndash;&gt;-->
+<!--        </a>-->
+<!--        <a class="nav-link make" href="#popular-places">Popular Places</a>-->
+<!--        <a class="nav-link make" href="#about">About</a>-->
+<!--          <a class="nav-link make" href="#heritage">Heritage</a>-->
+<!--<form method="post" action="{% url 'state' %}">-->
+<!--    {% csrf_token %}-->
+<!--    <div class="input-group mb-3">-->
+<!--        <label for="state_name" class="visually-hidden">State Name:</label>-->
+<!--        <input type="text" id="state_name" name="state_name" class="form-control me-2" placeholder="State Name" required>-->
+<!--        <button type="submit" class="btn btn-warning">Search</button>-->
+<!--    </div>-->
+<!--</form>-->
+<!--          {% if error_message %}-->
+<!--    <p>{{ error_message }}</p>-->
+<!--{% endif %}-->
+<!--      </div>-->
+<!--    </div>-->
+<!--&lt;!&ndash;  </nav>&ndash;&gt;-->
+<!--&lt;!&ndash;  <nav class="navbar navbar-expand-lg" id="navbar">&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="logo">&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash; Your logo content goes here &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;      <div class="collapse navbar-collapse" id="mynavbar">&ndash;&gt;-->
+<!--&lt;!&ndash;        <ul class="navbar-nav me-auto">&ndash;&gt;-->
+<!--&lt;!&ndash;          <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="nav-link" href="#near-places">Near Places</a>&ndash;&gt;-->
+<!--&lt;!&ndash;          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;          <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="nav-link" href="#gallary">Popular Places</a>&ndash;&gt;-->
+<!--&lt;!&ndash;          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;          <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="nav-link" href="#about">About</a>&ndash;&gt;-->
+<!--&lt;!&ndash;          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;          <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;            <a class="nav-link" href="#heritage">Heritage</a>&ndash;&gt;-->
+<!--&lt;!&ndash;          </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;         <form class="d-flex" action="{% url 'state' %}" method="get" onsubmit="return handleFormSubmit()">&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    <input class="form-control me-2" type="text" placeholder="Search" name="query">&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <span><i class="fa-solid fa-bars"></i></span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      </button>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;</form>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash; toursim_app/state_form.html &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;<form method="post" action="{% url 'state' %}">&ndash;&gt;-->
+<!--&lt;!&ndash;    {% csrf_token %}&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="input-group mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;        <label for="state_name" class="visually-hidden">State Name:</label>&ndash;&gt;-->
+<!--&lt;!&ndash;        <input type="text" id="state_name" name="state_name" class="form-control me-2" placeholder="State Name" required>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button type="submit" class="btn btn-warning">Search</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</form>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;{% if error_message %}&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>{{ error_message }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;{% endif %}&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </nav>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<nav class="navbar navbar-expand-lg bg-body-tertiary">&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="container-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;    <a class="navbar-brand" href="#">Navbar</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">&ndash;&gt;-->
+<!--&lt;!&ndash;      <span class="navbar-toggler-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;    </button>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="navbar-nav">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a class="nav-link active" aria-current="page" href="#">Home</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a class="nav-link" href="#">Features</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a class="nav-link" href="#">Pricing</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <a class="nav-link disabled" aria-disabled="true">Disabled</a>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</nav>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <div class="jumbotron">&ndash;&gt;-->
+<!--&lt;!&ndash;    <section class="container-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="text-overlay">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>Explore the Beauty of INDIA</p>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </section>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--  <div class="jumbotron custom-negative-margin">-->
+<!--    <video autoplay loop muted poster="path/to/your/poster-image.jpg" class="fullscreen-bg__video">-->
+<!--        &lt;!&ndash; Provide multiple video sources for better compatibility &ndash;&gt;-->
+<!--        <source src="path/to/your/video.mp4" type="video/mp4">-->
+<!--        Your browser does not support the video tag.-->
+<!--    </video>-->
+<!--    <section class="container-fluid">-->
+<!--        <div class="text-overlay">-->
+<!--            <p class="display-4 text-white">Explore the Beauty of INDIA</p>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--  </div>-->
+
+<!--  <div class="container mt-5 popular-places">-->
+<!--  <div class="About-India custom-margin">-->
+<!--    <h2>About</h2>-->
+<!--    <div class="col-12 paragraph text-justify read-more-hide">-->
+<!--    <p>Fringed by the Great Himalayas in the north, it stretches southwards and at the Tropic of Cancer, tapers off into the Indian Ocean between the Bay of Bengal on the east and the Arabian Sea on the west. As you travel the expanse of the country, you are greeted by diverse nuances of cuisines, faiths, arts, crafts, music, nature, lands, tribes, history and adventure sports. India has a mesmeric conflation of the old and the new. As the bustling old bazaars rub shoulders with swanky shopping malls, and majestic monuments accompany luxurious heritage hotels, the quintessential traveller can get the best of both worlds. Head to the mountains, enjoy a beach retreat or cruise through the golden Thar, India has options galore for all.</p>-->
+
+<!--    </div>-->
+<!--</div>-->
+
+<!--  <div class="container mt-5 popular-places">-->
+<!--  <h2>Popular Places</h2>-->
+<!--  <div id="placesCarousel" class="carousel slide" data-ride="carousel">-->
+<!--    <div class="carousel-inner">-->
+<!--      {% for place in nearby_places %}-->
+<!--        <div class="carousel-item {% if forloop.first %}active{% endif %}">-->
+<!--          <div class="col-md-4">-->
+<!--            <div class="card nearby-place">-->
+<!--              <img src="{{ place.image.url }}" alt="{{ place.name }}" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">-->
+<!--              <div class="card-body">-->
+<!--                <h4 class="card-title">-->
+<!--                  <i class="bi bi-geo-alt"></i> {{ place.name }}-->
+<!--                </h4>-->
+<!--                <p class="card-text">{{ place.description }}</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      {% endfor %}-->
+<!--    </div>-->
+<!--    <a class="carousel-control-prev" href="#placesCarousel" role="button" data-slide="prev">-->
+<!--      <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--      <span class="sr-only">Previous</span>-->
+<!--    </a>-->
+<!--    <a class="carousel-control-next" href="#placesCarousel" role="button" data-slide="next">-->
+<!--      <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--      <span class="sr-only">Next</span>-->
+<!--    </a>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash;    <h2>Popular States</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;    {% for state in states %}&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="nearby-place">&ndash;&gt;-->
+<!--&lt;!&ndash;             <div class="carousel-item {% if forloop.first %}active{% endif %}">&ndash;&gt;-->
+<!--&lt;!&ndash;          <img src="{{ state.image.url }}" alt="{{ state.name }}" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;          <h4>{{ state.name }}</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;          <p>{{ state.description }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;     <a class="carousel-control-prev" href="#placesCarousel" role="button" data-slide="prev">&ndash;&gt;-->
+<!--&lt;!&ndash;        <span class="carousel-control-prev-icon" aria-hidden="true"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;        <span class="sr-only">Previous</span>&ndash;&gt;-->
+<!--&lt;!&ndash;      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;      <a class="carousel-control-next" href="#placesCarousel" role="button" data-slide="next">&ndash;&gt;-->
+<!--&lt;!&ndash;        <span class="carousel-control-next-icon" aria-hidden="true"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;        <span class="sr-only">Next</span>&ndash;&gt;-->
+<!--&lt;!&ndash;      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;    {% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <h2>Nearby Places</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash; Place 1 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="nearby-place">&ndash;&gt;-->
+<!--&lt;!&ndash;            <img src="place1.jpg" alt="Place 1" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h4>Place Name 1</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>Description of Place 1.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash; Place 2 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="nearby-place">&ndash;&gt;-->
+<!--&lt;!&ndash;            <img src="place2.jpg" alt="Place 2" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h4>Place Name 2</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>Description of Place 2.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash; Place 3 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="nearby-place">&ndash;&gt;-->
+<!--&lt;!&ndash;            <img src="place3.jpg" alt="Place 3" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;            <h4>Place Name 3</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>Description of Place 3.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>  &lt;!&ndash; Row 2 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="carousel-item">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash; Place 4 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="carousel-box">&ndash;&gt;-->
+<!--&lt;!&ndash;                <i class="fas fa-map-marker-alt"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="text">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <h5>Location Name 4</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <p>Description for Location 4.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            &lt;!&ndash; Place 5 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;              <div class="carousel-box">&ndash;&gt;-->
+<!--&lt;!&ndash;                <i class="fas fa-map-marker-alt"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="text">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <h5>Location Name 5</h5>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <p>Description for Location 5.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            &lt;!&ndash; Add more places as needed &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+
+<!--      &lt;!&ndash; Previous and Next Buttons &ndash;&gt;-->
+
+
+<!--      &lt;!&ndash; Great People Container &ndash;&gt;-->
+<!--<div class="container mt-5">-->
+<!--  <h2>Quotes For Travelers</h2>-->
+
+<!--  <div class="row row-cols-1 row-cols-md-3 g-4">-->
+<!--    &lt;!&ndash; Person 1 &ndash;&gt;-->
+<!--    <div class="col">-->
+<!--      <div class="card h-100">-->
+<!--        <div class="card-body">-->
+<!--          <p class="card-text">"It is true that even across the Himalayan barrier India has sent to the west, such gifts as grammar and logic, philosophy and fables, hypnotism and chess, and above all numerals and the decimal system."</p>-->
+<!--        </div>-->
+<!--        <div class="card-footer">-->
+<!--          <small class="text-muted">&#45;&#45;Will Durant</small>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Person 2 &ndash;&gt;-->
+<!--    <div class="col">-->
+<!--      <div class="card h-100">-->
+<!--        <div class="card-body">-->
+<!--          <p class="card-text">"India is not, as people keep calling it, an underdeveloped country, but rather, in the context of its history and cultural heritage, a highly developed one in an advanced state of decay."</p>-->
+<!--        </div>-->
+<!--        <div class="card-footer">-->
+<!--          <small class="text-muted">&#45;&#45;Shashi Tharoor</small>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; Person 3 &ndash;&gt;-->
+<!--    <div class="col">-->
+<!--      <div class="card h-100">-->
+<!--        <div class="card-body">-->
+<!--          <p class="card-text">"We owe a lot to the Indians, who taught us how to count, without which no worthwhile scientific discovery could have been made."</p>-->
+<!--        </div>-->
+<!--        <div class="card-footer">-->
+<!--          <small class="text-muted">&#45;&#45;Albert Einstein</small>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--  <section class="container" id="heritage">-->
+<!--    <h2>Heritage Preservation</h2>-->
+<!--    <p>India's cultural heritage, woven into the fabric of its history, encompasses a myriad of architectural wonders and sacred sites. Preserving these treasures is vital to maintaining a connection to our roots and passing down the legacy to future generations. Despite challenges posed by urbanization and modern development, ongoing conservation projects employ techniques such as architectural restoration and community engagement to ensure the longevity of these invaluable landmarks. From the iconic Taj Mahal to the ancient Ajanta and Ellora Caves, each site narrates a unique story, emphasizing the importance of heritage preservation in fostering cultural pride and identity.</p>-->
+<!--  </section>-->
+
+<!--&lt;!&ndash;  &lt;!&ndash; Container for Heritage Preservations in India &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="container mt-5">&ndash;&gt;-->
+<!--&lt;!&ndash;    <h2>Heritage Preservations in India</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;      &lt;!&ndash; Heritage Site 1 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="heritage-preservation">&ndash;&gt;-->
+<!--&lt;!&ndash;          <img src="heritage1.jpg" alt="Heritage Site 1" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;          <h4>Heritage Site Name 1</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;          <p>Description of Heritage Site 1.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      &lt;!&ndash; Heritage Site 2 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="heritage-preservation">&ndash;&gt;-->
+<!--&lt;!&ndash;          <img src="heritage2.jpg" alt="Heritage Site 2" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;          <h4>Heritage Site Name 2</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;          <p>Description of Heritage Site 2.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      &lt;!&ndash; Heritage Site 3 &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="heritage-preservation">&ndash;&gt;-->
+<!--&lt;!&ndash;          <img src="heritage3.jpg" alt="Heritage Site 3" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;          <h4>Heritage Site Name 3</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;          <p>Description of Heritage Site 3.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash; Heritage Preservations in India &ndash;&gt;-->
+<!--<div class="container mt-5 heritage">-->
+<!--  <h2>Heritage Preservations in India</h2>-->
+<!--  <div class="row">-->
+<!--    {% for site in heritage_sites %}-->
+<!--      <div class="col-md-4">-->
+<!--        <div class="heritage-preservation card p-3">-->
+<!--          <img src="{{ site.image.url }}" alt="{{ site.name }}" class="img-fluid">-->
+<!--          <h4 class="mt-3">{{ site.name }}</h4>-->
+<!--          <p>{{ site.description }}</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    {% endfor %}-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!-- &lt;!&ndash; Footer with All States and Copyright &ndash;&gt;-->
+<!--<footer class="mt-5">-->
+<!--  <div class="foot-panel1">-->
+<!--    Back to Top-->
+<!--  </div>-->
+
+<!--  <div class="foot-panel2 d-flex">-->
+<!--    <div class="states-list">-->
+<!--      <h5>States</h5>-->
+<!--      <ul class="list-unstyled">-->
+<!--        <li><a href="#">Telangana</a></li><br>-->
+<!--        <li><a href="#">Karnataka</a></li>-->
+<!--        <li><a href="#">Maharashtra</a></li>-->
+<!--        <li><a href="#">Tamil Nadu</a></li>-->
+<!--        <li><a href="#">Kerala</a></li>-->
+<!--      </ul>-->
+<!--    </div>-->
+
+<!--    <div class="popular-places-list ml-4">-->
+<!--      <h5>Popular Places</h5>-->
+<!--      <ul class="list-unstyled">-->
+<!--        <li><a href="#">Hyderabad</a></li>-->
+<!--        <li><a href="#">Delhi</a></li>-->
+<!--        <li><a href="#">Bangalore</a></li>-->
+<!--        <li><a href="#">Chennai</a></li>-->
+<!--        <li><a href="#">Goa</a></li>-->
+<!--        <li><a href="#">Mumbai</a></li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="foot-panel3">-->
+<!--    <div class="logo"></div>-->
+<!--  </div>-->
+
+<!--  <div class="foot-panel4">-->
+<!--    © Tourism places-->
+<!--  </div>-->
+<!--</footer>-->
+
+<!--{% endblock %}-->
+<!--<script>-->
+<!--    function handleFormSubmit() {-->
+<!--        var queryValue = document.querySelector('input[name="query"]').value.trim();-->
+<!--        if (!queryValue) {-->
+<!--            return false;  // Prevent form submission with empty query-->
+<!--        }-->
+<!--        var formAction = "{% url 'state' %}?query=" + encodeURIComponent(queryValue);-->
+<!--        window.location.href = formAction;-->
+<!--        return false;  // Prevent default form submission-->
+<!--    }-->
+<!--</script>-->
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+</body>
+</html>

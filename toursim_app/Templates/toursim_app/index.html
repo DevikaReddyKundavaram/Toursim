@@ -1,0 +1,234 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism in India</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+    <ul class="nav">
+        <li class="nav-items"><a href="#popular-places">Popular Places</a></li>
+        <li class="nav-items"><a href="#about">About</a></li>
+        <li class="nav-items"><a href="#heritage">Heritage</a>
+        <li class="nav-items">
+        <form method="post" action="{% url 'state' %}">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+            <label for="state_name" class="visually-hidden">State Name:</label>
+            <input type="text" id="state_name" name="state_name" class="form-control me-2"
+                placeholder="State Name" required>
+            <button type="submit" class="btn btn-warning">Search</button>
+        </div>
+        </form>
+        </li>
+        {% if error_message %}
+            <p>{{ error_message }}</p>
+        {% endif %}
+        
+    </ul>
+    {% comment %} <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+
+                <a class="nav-link make" href="#popular-places">Popular Places</a>
+                <a class="nav-link make" href="#about">About</a>
+                <a class="nav-link make" href="#heritage">Heritage</a>
+                <form method="post" action="{% url 'state' %}">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        <label for="state_name" class="visually-hidden">State Name:</label>
+                        <input type="text" id="state_name" name="state_name" class="form-control me-2"
+                            placeholder="State Name" required>
+                        <button type="submit" class="btn btn-warning">Search</button>
+                    </div>
+                </form>
+                {% if error_message %}
+                    <p>{{ error_message }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </nav> {% endcomment %}
+
+    <div >
+<!--        class=" custom-negative-margin"-->
+<!--        <video autoplay loop muted poster="path/to/your/poster-image.jpg" class="fullscreen-bg__video">-->
+<!--            &lt;!&ndash; Provide multiple video sources for better compatibility &ndash;&gt;-->
+<!--            <source src="path/to/your/video.mp4" type="video/mp4">-->
+<!--            Your browser does not support the video tag.-->
+<!--        </video>-->
+       <div>
+            <div>
+                <p class="display-4 text-white">Explore the Beauty of INDIA</p>
+            </div>
+        </div>
+    </div>
+<div class="container mt-5 popular-places">
+    <h2>Popular Places</h2>
+    <div class="row">
+        {% for place in nearby_places %}
+            <div class="col-md-4">
+                <div class="card nearby-place">
+                    <a href="{% url 'city' city_name=place.name %}">
+                        <img class="img-fluid" src="{{ place.image.url }}" alt="{{ place.name }}"
+                             style="height: 200px; object-fit: cover;">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <i class="bi bi-geo-alt"></i> {{ place.name }}
+                        </h4>
+                        <p class="card-text">{{ place.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+<!--    <div class="container mt-5 popular-places">-->
+<!--        <h2>Popular Places</h2>-->
+<!--        <div id="placesCarousel" class="carousel slide" data-ride="carousel">-->
+<!--            <div class="carousel-inner">-->
+<!--                {% for place in nearby_places %}-->
+<!--                    <div class="carousel-item {% if forloop.first %}active{% endif %}">-->
+<!--                        <div class="col-md-4">-->
+<!--                            <div class="card nearby-place">-->
+<!--                                 <a href="{% url 'city' city_name=place.name %}">-->
+<!--                                <img class="img-fluid" src="{{ place.image.url }}" alt="{{ place.name }}" class="card-img-top img-fluid"-->
+<!--                                     style="height: 200px; object-fit: cover;"></a>-->
+<!--                                <div class="card-body">-->
+<!--                                    <h4 class="card-title">-->
+<!--                                        <i class="bi bi-geo-alt"></i> {{ place.name }}-->
+<!--                                    </h4>-->
+<!--                                    <p class="card-text">{{ place.description }}</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+<!--            <a class="carousel-control-prev" href="#placesCarousel" role="button" data-slide="prev">-->
+<!--                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--                <span class="sr-only">Previous</span>-->
+<!--            </a>-->
+<!--            <a class="carousel-control-next" href="#placesCarousel" role="button" data-slide="next">-->
+<!--                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--                <span class="sr-only">Next</span>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+
+   <div class="container mt-5 heritage">
+    <h2>Heritage Preservations in India</h2>
+    <div class="row">
+        {% for site in heritage_sites %}
+            <div class="col-md-4">
+                <div class="heritage-preservation card p-3">
+                    <a href="{% url 'location' location_name=site.name %}">
+                        <img src="{{ site.image.url }}" alt="{{ site.name }}" class="img-fluid"></a>
+                        <h4 class="mt-3">{{ site.name }}</h4>
+                        <p>{{ site.description }}</p>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+
+
+    {% comment %} -----footer----- {% endcomment %}
+
+    <footer class="mt-5">
+        {% comment %} <div class="foot-panel2 ">
+            <div class="states-list">
+                <h5>States</h5>
+                <ul class="list-unstyled">
+                <li><a href="#">Telangana</a></li>
+                <li><a href="#">Karnataka</a></li>
+                <li><a href="#">Maharashtra</a></li>
+                <li><a href="#">Tamil Nadu</a></li>
+                <li><a href="#">Kerala</a></li>
+              </ul>
+            </div>
+
+            <div class="popular-places-list ml-4">
+              <h5>Popular Places</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Hyderabad</a></li>
+                <li><a href="#">Delhi</a></li>
+                <li><a href="#">Bangalore</a></li>
+                <li><a href="#">Chennai</a></li>
+                <li><a href="#">Goa</a></li>
+                <li><a href="#">Mumbai</a></li>
+              </ul>
+            </div>
+          </div> {% endcomment %}
+{% comment %} 
+  <div class="foot-panel3">
+    <div class="logo"></div>
+  </div> {% endcomment %}
+
+  <div class="foot-panel4">
+    © Tourism places
+  </div>
+</footer>
+
+
+<script>
+    function handleFormSubmit() {
+        var queryValue = document.querySelector('input[name="query"]').value.trim();
+        if (!queryValue) {
+            return false;  // Prevent form submission with empty query
+        }
+        var formAction = "{% url 'state' %}?query=" + encodeURIComponent(queryValue);
+        window.location.href = formAction;
+        return false;  // Prevent default form submission
+    }
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.place-carousel-item').on('click', function () {
+            var placeName = $(this).find('.card-title').text().trim();
+            // Update the URL structure based on your project setup
+            window.location.href = '/city/' + encodeURIComponent(placeName) + '/';
+        });
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,270 @@
+
+
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State</title>
+
+    <link rel="stylesheet" href="{% static 'styles1.css' %}">
+
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Link -->
+
+
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Font Awesome Cdn -->
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+</head>
+<body>
+    
+
+
+
+{% block content %}
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container">
+	<div class="logo">
+	</div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span><i class="fa-solid fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+<!--              <li class="nav-item">-->
+<!--                <a class="nav-link active" href="index.html">Home</a>-->
+<!--              </li>-->
+              <li class="nav-item">
+                <a class="nav-link" href="#places">Places</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              
+             
+            </ul>
+
+              <form method="post" action="{% url 'city' %}">
+    {% csrf_token %}
+    <div class="input-group mb-3">
+        <label for="city_name" class="visually-hidden">City Name:</label>
+        <input type="text" id="city_name" name="city_name" class="form-control" placeholder="City Name" required>
+        <button type="submit" class="btn btn-warning">Search</button>
+    </div>
+</form>
+          </div>
+        </div>
+      </nav>
+    <!-- Navbar End -->
+
+
+
+
+
+    <!-- Home Section Start -->
+    <div class="home">
+    {% comment %} <!-- Video Container -->
+    <video autoplay loop muted poster="path/to/your/poster-image.jpg" class="fullscreen-bg__video">
+        <!-- Provide multiple video sources for better compatibility -->
+        <source src="path/to/your/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video> {% endcomment %}
+
+    <div class="content">
+        <h3>Welcome To {{ state.state_name }}</h3>
+
+        <img src="{{ place.image.url }}" alt="{{ place.name }}" class="img-fluid">
+        <h4>{{ state.name }}</h4>
+        <!-- Add your state description if needed -->
+        <!-- <p>{{ state.description }}</p> -->
+    </div>
+</div>
+
+
+    <!-- Home Section End -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Section Packages Start -->
+    <!-- Section Places Start -->
+<section class="places" id="places">
+  <div class="container">
+
+    <div class="main-txt">
+      <h1><span>P</span>laces to explore in {{state.state_name}}</h1>
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+
+      {% for city in cities %} {# Assuming places is a queryset of your Place model #} <!--Plcaes in State -->
+
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card">
+              <a href="{% url 'city' city.city_name %}">  {# Assuming 'city_detail' is the name of the view for city details #}
+          <img class="img-fluid" src="{{ city.city_image.url }}" alt="{{ city.city_name }}">
+        </a>
+<!--          <img src="{{ city.city_image.url }}" alt="{{ city.city_name }}">-->
+          <div class="card-body">
+            <h3>{{ city.city_name }}</h3>
+<!--            <p>{{ city.city_description }}</p>-->
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+<!-- Section Places End -->
+
+
+
+
+
+
+
+    
+
+    <!-- Section Gallary Start -->
+    <section class="gallery" id="gallery">
+  <div class="container">
+
+    <div class="main-txt">
+      <h1><span>G</span>allery</h1>
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+      {% for image_path in gallery %}
+        <div class="col-md-4 py-3 py-md-0">
+          <div class="card">
+          <img src="{{ place.state_image.url }}" alt="{{ place.name }}">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+    <!-- Section Gallary End -->
+
+
+
+
+
+
+
+    <!-- About Start -->
+    <section class="about" id="about">
+      <div class="container">
+
+        <div class="main-txt">
+          <h1>About <span>{{state.state_name}} State</span></h1>
+        </div>
+
+        <div class="row" style="margin-top: 50px;">
+
+          <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+                <img class="img-fluid" src="{{ state.state_image.url }}" alt="{{ place.name }}">
+            </div>
+          </div>
+
+          <div class="col-md-6 py-3 py-md-0">
+            <p>{{state.state_description}}</p>
+<!--            <h2>Heritage Preservation</h2>-->
+<!--            <p>Telangana is committed to the preservation of its rich cultural and historical heritage, reflecting the state's diverse past. The government of Telangana actively engages in initiatives to protect and conserve heritage sites, ensuring they are passed down to future generations. Hyderabad, the capital of Telangana, boasts iconic heritage structures like the Charminar, Golconda Fort, and Qutb Shahi Tombs, which are meticulously preserved. Various heritage conservation programs in Telangana focus on restoring ancient temples, palaces, and traditional architecture, showcasing the state's architectural marvels.</p>-->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- About End -->
+
+
+
+
+
+
+
+<footer class="mt-5">
+  {% comment %} <div class="foot-panel1">
+    Back to Top
+  </div>
+
+  <div class="foot-panel2 d-flex">
+    <div class="states-list">
+      <h5>States</h5>
+      <ul class="list-unstyled">
+        <li><a href="#">Telangana</a></li><br>
+        <li><a href="#">Karnataka</a></li>
+        <li><a href="#">Maharashtra</a></li>
+        <li><a href="#">Tamil Nadu</a></li>
+        <li><a href="#">Kerala</a></li>
+      </ul>
+    </div>
+
+    <div class="popular-places-list ml-4">
+      <h5>Popular Places</h5>
+      <ul class="list-unstyled">
+        <li><a href="#">Hyderabad</a></li>
+        <li><a href="#">Delhi</a></li>
+        <li><a href="#">Bangalore</a></li>
+        <li><a href="#">Chennai</a></li>
+        <li><a href="#">Goa</a></li>
+        <li><a href="#">Mumbai</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot-panel3">
+    <div class="logo"></div>
+  </div> {% endcomment %}
+
+  <div class="foot-panel4">
+    © Tourism places
+  </div>
+</footer>
+
+
+
+
+
+
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+{% endblock %}
+</body>
+</html>
+

@@ -1,0 +1,198 @@
+/* toursim_app/css/styles.css */
+
+/* Add your custom styles here */
+
+/* Navbar styles */
+.navbar {
+  background-color: #343a40;/* Navbar background color */
+  margin-bottom:20px;
+
+}
+h2{
+    margin-bottom:2rem;
+}
+.navbar-nav a {
+  color: #ffffff; /* Navbar link color */
+  justify-content:space-between;
+}
+
+.custom-margin {
+    margin-bottom: 20px; /* Adjust the value as needed */
+  }
+.custom-negative-margin {
+    margin-top: -70px; /* Adjust the value as needed */
+  }
+.jumbotron {
+    padding-bottom:20px;
+    position: relative;
+    overflow: hidden;
+}
+.space{
+    margin:50px;
+}
+.fullscreen-bg__video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+img:hover {
+        transform: scale(1.1);
+    }
+/* Jumbotron styles */
+.jumbotron {
+  background-image: url('path/to/your/jumbotron-background-image.jpg');
+  background-size: cover;
+  color: #ffffff; /* Text color on Jumbotron */
+}
+
+.text-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Overlay color on Jumbotron */
+}
+
+/* About India section */
+.About-India {
+  padding: 50px 0;
+}
+
+/* Nearby Places section */
+.nearby-places {
+  padding: 50px 0;
+}
+
+.nearby-place {
+  margin-bottom: 30px;
+}
+
+/* Quotes for Travelers section */
+.person {
+  text-align: center;
+}
+
+/* Heritage Preservation section */
+.heritage-preservation {
+  margin-bottom: 30px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #343a40; /* Footer background color */
+  color: #ffffff; /* Footer text color */
+  padding: 20px 0;
+}
+
+.foot-panel1,
+.foot-panel2,
+.foot-panel3,
+.foot-panel4 {
+  text-align: center;
+}
+
+.foot-panel2 ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.foot-panel2 a {
+  text-decoration: none;
+  color: #ffffff; /* Footer link color */
+}
+
+/* Add more styles as needed */
+
+.foot-panel2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.states-list,
+.popular-places-list {
+  flex: 1;
+}
+
+.states-list h5,
+.popular-places-list h5 {
+  margin-bottom: 5px;
+}
+.foot-panel2 {
+  display: flex;
+  flex-direction: column;  /* Change flex direction to column */
+  align-items: flex-start;  /* Align items to the start of the container */
+}
+
+.states-list,
+.popular-places-list {
+  margin-top: 10px;  /* Add margin between the lists */
+}
+
+.states-list h5,
+.popular-places-list h5 {
+  margin-bottom: 5px;
+}
+.navbar-image{
+  width: 10px;
+  height: 20px;
+}
+.make
+{
+  color: white !important;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+
+  .foot-panel2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+  }
+
+  .states-list,
+  .popular-places-list {
+    width: 45%;
+     margin:0;/* Adjust the width as needed */
+  }
+
+  .states-list h5,
+  .popular-places-list h5 {
+    margin-bottom: 10px;
+  }
+
+  .foot-panel3 {
+    text-align: center;
+  }
+
+  .foot-panel4 {
+    text-align: right;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin for lists */
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }

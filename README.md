@@ -12,3 +12,6 @@ Back-End: Django (Python)<br>
 Database: MySql<br>
 Media Management: Django's built-in media handling for image and video storage<br>
 Deployment: PythonAnywhere
+
+**You can Tour our website Through this link**
+http://tourindia.pythonanywhere.com/
